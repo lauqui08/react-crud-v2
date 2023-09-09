@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import pikaLoading from "../assets/pikaloading.gif";
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Home = () => {
     const url = "http://127.0.0.1:5000/api/persons";

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Home from './pages/Home';
 import View from './pages/View';
 import Edit from './pages/Edit';
+import Create from './pages/Create';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
@@ -23,14 +24,8 @@ function App() {
                       <Link className="nav-link" to={'/'}>Home</Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Features</a>
+                      <Link className="nav-link" to={'/Create'}>Create</Link>
                     </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-                      </li>
                   </ul>
                 </div>
               </div>
@@ -41,6 +36,7 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/View/:id' element={<View />}></Route>
             <Route path='/Edit/:id' element={<Edit />}></Route>
+            <Route path='/Create' element={<Create />}></Route>
           </Routes>
         </Router>
     </>
